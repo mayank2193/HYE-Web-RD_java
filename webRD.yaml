@@ -1,0 +1,17 @@
+version: "0.1"
+runson: win
+
+autosplit: true
+
+concurrency: 2
+
+testDiscovery:
+    command: cat tests.txt
+    mode: static
+    type: raw
+
+testRunnerCommand: mvn test -P $test
+
+framework:
+    name: appium
+   
